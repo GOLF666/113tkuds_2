@@ -49,3 +49,14 @@ public class lt_10_regular {
         System.out.println(isMatch("aab", "c*a*b"));    // true
     }
 }
+
+/*
+解題思路：
+1. 使用動態規劃 dp[i][j] 表示 s 的前 i 個字元與 p 的前 j 個字元是否匹配。
+2. 若 pattern 為 '.' 或字符相等，則繼承 dp[i-1][j-1]。
+3. 若 pattern 為 '*'，可分兩種情況：
+   - 當作 0 次出現：跳過 p[j-2] 和 '*'，使用 dp[i][j-2]
+   - 當作多次出現：若 p[j-2] 能匹配 s[i-1]，則 dp[i][j] |= dp[i-1][j]
+4. 初始化時需處理空字串與前綴如 a*, a*b* 等特殊情況。
+5. 時間與空間複雜度均為 O(m * n)，其中 m, n 為 s 與 p 長度。
+*/
