@@ -45,3 +45,12 @@ public class lt_06_zigzag {
         System.out.println("Zigzag Result 3: " + convert(s2, rows3)); // A
     }
 }
+
+/*
+解題思路：
+1. 將每個字元依照 Zigzag 順序分配到對應的行。
+2. 當 currRow 為 0 或 numRows - 1 時，改變方向（由下轉上或由上轉下）。
+3. 使用 StringBuilder[] 陣列來儲存每行資料。
+4. 最後將每行的字串依序合併成最終結果。
+5. 時間複雜度 O(n)，空間複雜度 O(n)，其中 n 為字串長度。
+*/

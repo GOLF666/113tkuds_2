@@ -28,3 +28,16 @@ public class lt_09_palindrome {
         System.out.println(isPalindrome(0));        // true
     }
 }
+
+/*
+解題思路：
+1. 回文數定義：正著讀與反著讀相同。
+2. 排除負數與非 0 結尾為 0 的數（如 10）一定不是回文。
+3. 使用「反轉一半」技巧避免整型溢位問題：
+   - 每次將末位加到 reversed 裡。
+   - 當 reversed ≥ x 時表示已處理一半。
+4. 最後判斷：
+   - 偶數位：x == reversed
+   - 奇數位：x == reversed / 10（忽略中間那一位）
+5. 時間複雜度 O(log₁₀n)，空間複雜度 O(1)
+*/

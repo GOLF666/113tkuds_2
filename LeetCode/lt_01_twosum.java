@@ -1,4 +1,5 @@
 package LeetCode;
+
 import java.util.HashMap;
 import java.util.Map;
 public class lt_01_twosum {
@@ -14,3 +15,12 @@ public class lt_01_twosum {
         return new int[] {}; // 根據題目保證一定有解，這行實際不會執行
     }
 }
+
+/*
+解題思路：
+1. 利用 HashMap 記錄每個數字與其索引位置。
+2. 每遍歷一個數字，計算與目標值的差值（complement）。
+3. 檢查該差值是否已存在於 map 中，若存在代表已找到解。
+4. 否則就將當前數字加入 map 繼續下一輪。
+5. 時間複雜度為 O(n)，空間複雜度為 O(n)。
+*/

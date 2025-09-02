@@ -46,3 +46,13 @@ public class lt_04_median {
         System.out.println("Median is: " + findMedianSortedArrays(nums3, nums4)); // 2.5
     }
 }
+
+/*
+解題思路：
+1. 題目要求找兩個排序陣列合併後的中位數。
+2. 先使用雙指標合併兩陣列成一個新的排序陣列 merged。
+3. 若 merged 長度為奇數，回傳中間元素。
+4. 若長度為偶數，回傳中間兩數平均。
+5. 時間複雜度為 O(m + n)，空間複雜度也為 O(m + n)。
+⚠️ 若要達到 O(log(min(m,n))) 時間，需使用二分搜尋（進階解法）。
+*/
