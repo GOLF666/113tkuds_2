@@ -1,6 +1,4 @@
 
-package LeetCode;
-
 public class lt_05_longestpalindromic {
 
     public static String longestPalindrome(String s) {

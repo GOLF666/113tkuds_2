@@ -1,4 +1,3 @@
-package LeetCode;
 
 public class lt_07_reverse {
     public int reverse(int x) {

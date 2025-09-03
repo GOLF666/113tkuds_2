@@ -1,4 +1,3 @@
-package LeetCode;
 
 class lt_11_containerwithmostwater {
     public int maxArea(int[] height) {
